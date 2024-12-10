@@ -1,0 +1,63 @@
+@use "../utils/variables" as var;
+.menu_toggle {
+  display: none;
+  .main_dropdown {
+    display: flex;
+    align-items: center;
+    background: var.$white-bg;
+    box-shadow: var.$box-shadow;
+    position: fixed;
+    top: 67px;
+    width: 100%;
+    z-index: 149;
+    padding: 10px;
+    .header_dropdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 40px;
+      .dropdown_item {
+        a {
+          color: var.$text-color;
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          &:hover {
+            color: var.$primary-color;
+          }
+        }
+      }
+      @media (max-width: 1192px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 100px;
+        justify-content: center;
+      }
+      @media (max-width: 1080px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 72px;
+        justify-content: center;
+      }
+      @media (max-width: 995px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 200px;
+        justify-content: center;
+      }
+      @media (max-width: 790px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 100px;
+        justify-content: center;
+      }
+      @media (max-width: 672px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4px 100px;
+        justify-content: center;
+      }
+    }
+  }
+}
+.active {
+  display: block;
+}

@@ -1,0 +1,106 @@
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+nav {
+  @include mxn.flex(center, space-between, 15px);
+  padding: 8px;
+  .navbar_menu {
+    @include mxn.flex(center, none, 15px);
+    @media (max-width: 672px) {
+      display: none;
+    }
+    ul {
+      @include mxn.flex(center, none, 15px);
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .cardCount {
+          position: absolute;
+          background: rgba(255, 102, 51, 1);
+          width: 20px;
+          height: 18px;
+          bottom: 38px;
+          left: 28px;
+          padding: 2px 4px -4px 4px;
+          color: var.$white-bg;
+          gap: 10px;
+          border-radius: 15px;
+          text-align: center;
+          font-size: 12px;
+        }
+        a {
+          color: var.$text-color;
+        }
+      }
+    }
+    .navbar_login {
+      .login {
+        @include mxn.flex(center, none, 25px);
+        @media (max-width: 1210px) {
+          gap: 10px;
+          .indicator {
+            display: none;
+          }
+        }
+        p {
+          @media (max-width: 1192px) {
+            display: none;
+          }
+        }
+      }
+      a {
+        color: var.$text-color;
+      }
+    }
+  }
+}
+.small_navbar {
+  position: fixed;
+  display: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var.$white-bg;
+  z-index: 10;
+  border-radius: 25px 25px 0 0;
+  box-shadow: var.$box-shadow;
+
+  @media (max-width: 672px) {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2px;
+          text-decoration: none;
+          color: var(--text-color);
+          font-size: 14px;
+
+          &:hover {
+            color: var.$primary-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,557 @@
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+@use "../components/buttons";
+
+.slider-section {
+  background: url(../../assets/images/slider/basket-bg.png);
+  background-size: contain;
+
+  @include mxn.flex(center, center, none);
+  position: relative;
+  top: 68px;
+  @media (max-width: 672px) {
+    top: 57px;
+  }
+  .slider {
+    @include mxn.flex(center, none, 4vh);
+    @media (max-width: 672px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    img {
+      @media (max-width: 672px) {
+        width: 50%;
+      }
+    }
+    h1 {
+      color: var.$text-color;
+      font-family: Rubik;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 72px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      @media (max-width: 672px) {
+        font-size: 36px;
+        line-height: 48px;
+      }
+      @media (max-width: 420px) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+}
+// products-cards
+.products-1 {
+  position: relative;
+  top: 112px;
+  .products_father {
+    @include mxn.flex(center, none, 120px);
+    flex-direction: column;
+  }
+  .cards-top-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: center;
+      gap: 16px;
+    }
+    h1 {
+      color: var.$text-color;
+      font-family: Rubik, sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 54px;
+      margin: 0;
+    }
+
+    .all_products {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .discount-row {
+    @include mxn.flex(center, space-between, 40px);
+    position: relative;
+    top: 50px;
+    flex-wrap: wrap;
+    @media (max-width: 623px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .product-card {
+      width: 272px;
+      height: 349px;
+      @include mxn.flex(center, none, 0px);
+      flex-direction: column;
+      gap: 0px;
+      border-radius: 4px;
+      opacity: 0px;
+      background: var.$white-bg;
+      box-shadow: var.$box-shadow;
+      h3 {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        width: 256px;
+        height: 48px;
+      }
+    }
+    .product-card__discount-row {
+      width: 56px;
+      height: 32px;
+      top: 118px;
+      left: 10px;
+      padding: 4px 8px 4px 8px;
+      gap: 10px;
+      border-radius: 4px;
+      background: var.$primary-color;
+      color: var.$white-bg;
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+  .newProducts-row {
+    @include mxn.flex(center, space-between, 40px);
+    flex-wrap: wrap;
+    @media (max-width: 623px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .product-card {
+      width: 272px;
+      height: 349px;
+      @include mxn.flex(center, none, 0px);
+      flex-direction: column;
+      gap: 0px;
+      border-radius: 4px;
+      opacity: 0px;
+      background: var.$white-bg;
+      box-shadow: var.$box-shadow;
+      h3 {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        width: 256px;
+        height: 48px;
+      }
+    }
+    .product-card__discount-row {
+      width: 56px;
+      height: 32px;
+      top: 118px;
+      left: 10px;
+      padding: 4px 8px 4px 8px;
+      gap: 10px;
+      border-radius: 4px;
+      background: var.$primary-color;
+      color: var.$white-bg;
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+  .boughtProducts-row {
+    @include mxn.flex(center, space-between, 40px);
+    flex-wrap: wrap;
+    @media (max-width: 623px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .product-card {
+      width: 272px;
+      height: 349px;
+      @include mxn.flex(center, none, 0px);
+      flex-direction: column;
+      gap: 0px;
+      border-radius: 4px;
+      opacity: 0px;
+      background: var.$white-bg;
+      box-shadow: var.$box-shadow;
+      h3 {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        color: var.$text-color;
+        font-family: Rubik;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        width: 256px;
+        height: 48px;
+      }
+    }
+  }
+  .product-card__discount-row {
+    width: 56px;
+    height: 32px;
+    top: 118px;
+    left: 10px;
+    padding: 4px 8px 4px 8px;
+    gap: 10px;
+    border-radius: 4px;
+    background: var.$primary-color;
+    color: var.$white-bg;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .product-card__footer {
+    position: relative;
+    .product-like {
+      position: absolute;
+      right: 0;
+      top: -160px;
+      cursor: pointer;
+      width: 40px;
+      height: 38px;
+      padding: 8px;
+      border-radius: 4px;
+      background: rgba(243, 242, 241, 0.372);
+      backdrop-filter: blur(5px);
+    }
+  }
+  .product-discount {
+    color: var.$span-color;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+// Специальные предложения
+.special-offers {
+  position: relative;
+  top: 120px;
+  padding: 16px;
+  max-width: 1244px;
+  margin: 0 auto;
+
+  &__title {
+    color: var.$text-color;
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 16px;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    background: rgba(252, 213, 186, 1);
+    box-shadow: 0px 8px 16px 0px rgba(202, 147, 96, 0.5);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s ease;
+    @media (max-width: 526px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &-image {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    &-description {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    &__two {
+      background: rgba(229, 255, 222, 1);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform 0.2s ease;
+      @media (max-width: 526px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+// map
+.map-section {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 120px;
+  max-width: 1244px;
+  margin: 0 auto;
+
+  h2 {
+    color: var.$text-color;
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    margin-bottom: 15px;
+    @media (max-width: 456px) {
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+      position: relative; /* Joylashuvni o'zgartirmaslik uchun */
+      white-space: nowrap; /* Matnning o'z joyida qolishi uchun */
+
+      &:hover {
+        background-color: #ddd;
+      }
+
+      &.active {
+        background-color: #34c759;
+        color: #fff;
+      }
+    }
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+    .map {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+// state
+.state {
+  max-width: 1225px;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  .state-top_text {
+    @include mxn.flex(center, space-between, none);
+    h1 {
+      font-family: Rubik;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 54px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: var.$text-color;
+    }
+    .all-state {
+      @include mxn.flex(center, none, 8px);
+      img {
+        rotate: -90deg;
+      }
+    }
+  }
+  .state-cards {
+    @include mxn.flex(center, none, 40px);
+
+    @media (max-width: 1242px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .state-card {
+      background: var.$white-bg;
+      box-shadow: var.$box-shadow;
+      width: 100%;
+      max-width: 376px;
+      height: auto;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .state_texts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        span {
+          font-size: 12px;
+        }
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+        button {
+          width: 100%;
+          max-width: 150px;
+          height: 40px;
+          padding: 8px;
+          gap: 8px;
+          border-radius: 4px;
+          background: rgba(229, 255, 222, 1);
+          border: none;
+          color: rgba(112, 192, 91, 1);
+          font-family: Rubik;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          &:hover {
+            background: rgba(112, 192, 91, 1);
+            color: var.$white-bg;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+.page_link {
+  position: relative;
+  top: 100px;
+  max-width: 1186px;
+  margin: 0 auto;
+  .links {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        rotate: -90deg;
+      }
+      li {
+        a {
+          color: rgba(143, 143, 143, 1);
+        }
+      }
+    }
+  }
+}
+.catalog {
+  margin-top: 120px;
+  .catalog_section {
+    max-width: 1158px;
+    margin: 0 auto;
+    h1 {
+      color: var.$text-color;
+      font-family: Rubik;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 96px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

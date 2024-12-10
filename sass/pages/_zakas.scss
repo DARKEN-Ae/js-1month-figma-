@@ -1,0 +1,128 @@
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+.korzina {
+  margin-top: 120px;
+  .korzina-section {
+    max-width: 1155px;
+    margin: 0 auto;
+
+    h1 {
+      color: var.$text-color;
+      font-family: Rubik;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 96px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    .in_takes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      width: 876px;
+      height: 72px;
+      gap: 16px;
+      border-radius: 4px;
+      max-width: 100%;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+      }
+
+      .korzina-content {
+        @include mxn.flex(center, none, 20px);
+        @media (max-width: 600px) {
+        }
+        img {
+          width: 80px;
+          height: 60px;
+          padding: 10px;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 1);
+          box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        }
+        .in_texts {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          h1 {
+            color: var.$text-color;
+            font-family: Rubik;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+          }
+          .pr_cost {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            h4 {
+              color: var.$text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.allProdactStyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 25px;
+  max-width: 100%;
+
+  @media (max-width: 940px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  @media (max-width: 940px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .product-card {
+    grid-template-columns: repeat(3, 1);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    .product-card__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-card__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+.notResultDiv {
+  display: flex;
+  flex-direction: column;
+  .notPr {
+    color: var.$text-color;
+    font-family: Rubik;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 96px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
