@@ -235,6 +235,18 @@ p.span {
   transition: 0.3s ease-in-out;
 }
 
+.back-top {
+  position: fixed;
+  bottom: 10vh;
+  right: 30px;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+#myBtn {
+  scroll-behavior: smooth;
+}
+
 footer {
   background: url(../../assets/images/footer/bg.png);
   background-size: contain;
